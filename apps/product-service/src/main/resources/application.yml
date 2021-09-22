@@ -1,0 +1,46 @@
+quarkus:
+  flyway:
+    migrate-at-start: true
+mp:
+  jwt:
+    verify:
+      publickey:
+        location: publickey.pem
+      issuer: "https://example.com/issuer"
+smallrye:
+  jwt:
+    sign:
+      key:
+        location: privatekey.pem
+
+"%dev":
+  quarkus:
+    swagger-ui:
+      enable: true
+    datasource:
+      db-kind: postgresql
+      username: product
+      password: product
+      jdbc:
+        url: jdbc:postgresql://localhost:65432/product
+    log:
+      console:
+        enable: true
+        format: '%d{yyyy-MM-dd HH:mm:ss,SSS} %5p %t %X{correlation-id} %c{3.}:%L %s%e%n'
+        json: false
+"%test":
+  flyway:
+    migrate-at-start: true
+    clean-at-start: true
+  quarkus:
+    log:
+      console:
+        enable: true
+        format: '%d{yyyy-MM-dd HH:mm:ss,SSS} %5p %t %X{correlation-id} %c{3.}:%L %s%e%n'
+        json: false
+    swagger-ui:
+      enable: true
+"%prod":
+  quarkus:
+    swagger-ui:
+      enable: false

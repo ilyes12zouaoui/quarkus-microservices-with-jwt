@@ -1,0 +1,991 @@
+{
+	"info": {
+		"_postman_id": "bce69291-73a2-462c-8298-5e1e252b2598",
+		"name": "product-service API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api/external/v1",
+			"item": [
+				{
+					"name": "authentication",
+					"item": [
+						{
+							"name": "/api/external/v1/authentication/login",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"ilyes.zouaoui@test.mail\",\r\n    \"password\":\"strongPass\"\r\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/external/v1/authentication/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"external",
+										"v1",
+										"authentication",
+										"login"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/external/v1/authentication/login",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"external",
+												"v1",
+												"authentication",
+												"login"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "/api/external/v1/authentication/my-first-name",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczovL2V4YW1wbGUuY29tL2lzc3VlciIsInVwbiI6ImlseWVzQGdtYWlsLmNvbSIsImdyb3VwcyI6WyJQUk9EVUNUX09XTkVSIl0sImlkIjoxLCJmaXJzdE5hbWUiOiJpbHllcyIsImxhc3ROYW1lIjoiem91YW91aSIsImVtYWlsIjoiaWx5ZXMuem91YW91aUB0ZXN0Lm1haWwiLCJyb2xlIjoiUFJPRFVDVF9PV05FUiIsImFnZSI6MjYsImlhdCI6MTYzMjIzMzEyNCwiZXhwIjoxNjMyMjMzNDI0LCJqdGkiOiJiN2NhZTI5Mi1mYTQ2LTQ4NjItOTVmNC04MGE1MmUwMjliN2UifQ.nyxFxdmsERQcmvJ7Bkd6Luu4gqiFbB71i3Fd52YA-VWxfMNRpF8TW9M5xUdAqBqaDRjWy1I2dQZxdy4_zt-u6VToP5opSp0cJ1C75SpY99LjGpRL6BAWcx3IXi54Z0ZVcEmYgHEX6SRTQhPtaiBeMk051C0ZD6wpUPVyA3zsusUMtvuybt7OAk42F5VZGO6veppjwli_egygFjjjdC1Df-0MYtVJRyESQ7uB4rOLoFUe3MS3ebbOSsoUKsYgfbp3q0Q-k_KLnpXcNl6SyEEfk7TDGtrVOOgLlhK_nUiE6hnTYKcjZd2qqBnB9xgemaP5sP1d4kiJNDWaP8_ucMWrcA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/external/v1/authentication/my-first-name",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"external",
+										"v1",
+										"authentication",
+										"my-first-name"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/external/v1/authentication/my-first-name",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"external",
+												"v1",
+												"authentication",
+												"my-first-name"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "/api/external/v1/authentication/register",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"age\": 26,\n    \"email\": \"ilyes.zouaoui@test.mail\",\n    \"firstName\": \"ilyes\",\n    \"lastName\": \"zouaoui\",\n    \"password\": \"strongPass\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/external/v1/authentication/register",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"external",
+										"v1",
+										"authentication",
+										"register"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"age\": \"<integer>\",\n    \"email\": \"<string>\",\n    \"firstName\": \"<string>\",\n    \"lastName\": \"<string>\",\n    \"password\": \"<string>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/external/v1/authentication/register",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"external",
+												"v1",
+												"authentication",
+												"register"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "/api/external/v1/authentication/register-admin",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"age\": \"<integer>\",\n    \"email\": \"<string>\",\n    \"firstName\": \"<string>\",\n    \"lastName\": \"<string>\",\n    \"password\": \"<string>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/external/v1/authentication/register-admin",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"external",
+										"v1",
+										"authentication",
+										"register-admin"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"age\": \"<integer>\",\n    \"email\": \"<string>\",\n    \"firstName\": \"<string>\",\n    \"lastName\": \"<string>\",\n    \"password\": \"<string>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/external/v1/authentication/register-admin",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"external",
+												"v1",
+												"authentication",
+												"register-admin"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "products",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "/api/external/v1/products/:id",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczovL2V4YW1wbGUuY29tL2lzc3VlciIsInVwbiI6ImlseWVzQGdtYWlsLmNvbSIsImdyb3VwcyI6WyJQUk9EVUNUX09XTkVSIl0sImlkIjoyLCJmaXJzdE5hbWUiOiJpbHllcyIsImxhc3ROYW1lIjoiem91YW91aSIsImVtYWlsIjoiaWx5ZXMuem91YW91aUB0ZXN0Lm1haWwiLCJyb2xlIjoiUFJPRFVDVF9PV05FUiIsImFnZSI6MjYsImlhdCI6MTYzMjIzMzI4MywiZXhwIjoxNjMyMjMzNTgzLCJqdGkiOiI4N2RhNzU0YS04Yzk0LTQyZmItODE3MC1kNzk3OWIyMGUwZWUifQ.hHTMdWoJljuuCsUp8aE4iTdfCRHpYsIB-P0k1ebQlHYmP1tLHplYJV2SFGCUnWTy4LeAi2lutx3c8CBQ3TeJ7PRSVBGlXjR4dOMdOSdePhyEdHLdVDpjFRw9WdXCdI1_Jna4oXUH9w54fJtyhTWlB4FZhEbMc6tgk3xQ1uJ1j3uACUqsvXMAmUDP_Bva49h3fhWMx-3p8rNJ4UdMeceV-ok5Iq4clIdKIYyE3_IGElqxiVqpQlABIxa2vNpuHRd77Jrihe94Nox-wv9yiQjIEcXVVVrWYV5RMtPHQlxaYa0DIJ13weu0evpr6y7UV6q8WipkjmkrnGPXiIy6I-liow",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/external/v1/products/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"external",
+												"v1",
+												"products",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/external/v1/products/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"external",
+														"v1",
+														"products",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "/api/external/v1/products/:id",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczovL2V4YW1wbGUuY29tL2lzc3VlciIsInVwbiI6ImlseWVzQGdtYWlsLmNvbSIsImdyb3VwcyI6WyJQUk9EVUNUX09XTkVSIl0sImlkIjoyLCJmaXJzdE5hbWUiOiJpbHllcyIsImxhc3ROYW1lIjoiem91YW91aSIsImVtYWlsIjoiaWx5ZXMuem91YW91aUB0ZXN0Lm1haWwiLCJyb2xlIjoiUFJPRFVDVF9PV05FUiIsImFnZSI6MjYsImlhdCI6MTYzMjIzMzI4MywiZXhwIjoxNjMyMjMzNTgzLCJqdGkiOiI4N2RhNzU0YS04Yzk0LTQyZmItODE3MC1kNzk3OWIyMGUwZWUifQ.hHTMdWoJljuuCsUp8aE4iTdfCRHpYsIB-P0k1ebQlHYmP1tLHplYJV2SFGCUnWTy4LeAi2lutx3c8CBQ3TeJ7PRSVBGlXjR4dOMdOSdePhyEdHLdVDpjFRw9WdXCdI1_Jna4oXUH9w54fJtyhTWlB4FZhEbMc6tgk3xQ1uJ1j3uACUqsvXMAmUDP_Bva49h3fhWMx-3p8rNJ4UdMeceV-ok5Iq4clIdKIYyE3_IGElqxiVqpQlABIxa2vNpuHRd77Jrihe94Nox-wv9yiQjIEcXVVVrWYV5RMtPHQlxaYa0DIJ13weu0evpr6y7UV6q8WipkjmkrnGPXiIy6I-liow",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"newchocco\",\n    \"price\": 2.3,\n    \"type\": \"food\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/external/v1/products/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"external",
+												"v1",
+												"products",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"createdAt\": \"<dateTime>\",\n    \"id\": \"<integer>\",\n    \"name\": \"<string>\",\n    \"price\": \"<double>\",\n    \"type\": \"<string>\",\n    \"updatedAt\": \"<dateTime>\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/external/v1/products/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"external",
+														"v1",
+														"products",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "/api/external/v1/products/:id",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczovL2V4YW1wbGUuY29tL2lzc3VlciIsInVwbiI6ImlseWVzQGdtYWlsLmNvbSIsImdyb3VwcyI6WyJQUk9EVUNUX09XTkVSIl0sImlkIjoyLCJmaXJzdE5hbWUiOiJpbHllcyIsImxhc3ROYW1lIjoiem91YW91aSIsImVtYWlsIjoiaWx5ZXMuem91YW91aUB0ZXN0Lm1haWwiLCJyb2xlIjoiUFJPRFVDVF9PV05FUiIsImFnZSI6MjYsImlhdCI6MTYzMjIzMzI4MywiZXhwIjoxNjMyMjMzNTgzLCJqdGkiOiI4N2RhNzU0YS04Yzk0LTQyZmItODE3MC1kNzk3OWIyMGUwZWUifQ.hHTMdWoJljuuCsUp8aE4iTdfCRHpYsIB-P0k1ebQlHYmP1tLHplYJV2SFGCUnWTy4LeAi2lutx3c8CBQ3TeJ7PRSVBGlXjR4dOMdOSdePhyEdHLdVDpjFRw9WdXCdI1_Jna4oXUH9w54fJtyhTWlB4FZhEbMc6tgk3xQ1uJ1j3uACUqsvXMAmUDP_Bva49h3fhWMx-3p8rNJ4UdMeceV-ok5Iq4clIdKIYyE3_IGElqxiVqpQlABIxa2vNpuHRd77Jrihe94Nox-wv9yiQjIEcXVVVrWYV5RMtPHQlxaYa0DIJ13weu0evpr6y7UV6q8WipkjmkrnGPXiIy6I-liow",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/external/v1/products/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"external",
+												"v1",
+												"products",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/external/v1/products/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"external",
+														"v1",
+														"products",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "/api/external/v1/products",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczovL2V4YW1wbGUuY29tL2lzc3VlciIsInVwbiI6ImlseWVzQGdtYWlsLmNvbSIsImdyb3VwcyI6WyJQUk9EVUNUX09XTkVSIl0sImlkIjoyLCJmaXJzdE5hbWUiOiJpbHllcyIsImxhc3ROYW1lIjoiem91YW91aSIsImVtYWlsIjoiaWx5ZXMuem91YW91aUB0ZXN0Lm1haWwiLCJyb2xlIjoiUFJPRFVDVF9PV05FUiIsImFnZSI6MjYsImlhdCI6MTYzMjIzMzI4MywiZXhwIjoxNjMyMjMzNTgzLCJqdGkiOiI4N2RhNzU0YS04Yzk0LTQyZmItODE3MC1kNzk3OWIyMGUwZWUifQ.hHTMdWoJljuuCsUp8aE4iTdfCRHpYsIB-P0k1ebQlHYmP1tLHplYJV2SFGCUnWTy4LeAi2lutx3c8CBQ3TeJ7PRSVBGlXjR4dOMdOSdePhyEdHLdVDpjFRw9WdXCdI1_Jna4oXUH9w54fJtyhTWlB4FZhEbMc6tgk3xQ1uJ1j3uACUqsvXMAmUDP_Bva49h3fhWMx-3p8rNJ4UdMeceV-ok5Iq4clIdKIYyE3_IGElqxiVqpQlABIxa2vNpuHRd77Jrihe94Nox-wv9yiQjIEcXVVVrWYV5RMtPHQlxaYa0DIJ13weu0evpr6y7UV6q8WipkjmkrnGPXiIy6I-liow",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/external/v1/products",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"external",
+										"v1",
+										"products"
+									],
+									"query": [
+										{
+											"key": "type",
+											"value": "<string>",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/external/v1/products?type=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"external",
+												"v1",
+												"products"
+											],
+											"query": [
+												{
+													"key": "type",
+													"value": "<string>"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "/api/external/v1/products",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczovL2V4YW1wbGUuY29tL2lzc3VlciIsInVwbiI6ImlseWVzQGdtYWlsLmNvbSIsImdyb3VwcyI6WyJQUk9EVUNUX09XTkVSIl0sImlkIjoyLCJmaXJzdE5hbWUiOiJpbHllcyIsImxhc3ROYW1lIjoiem91YW91aSIsImVtYWlsIjoiaWx5ZXMuem91YW91aUB0ZXN0Lm1haWwiLCJyb2xlIjoiUFJPRFVDVF9PV05FUiIsImFnZSI6MjYsImlhdCI6MTYzMjIzMzI4MywiZXhwIjoxNjMyMjMzNTgzLCJqdGkiOiI4N2RhNzU0YS04Yzk0LTQyZmItODE3MC1kNzk3OWIyMGUwZWUifQ.hHTMdWoJljuuCsUp8aE4iTdfCRHpYsIB-P0k1ebQlHYmP1tLHplYJV2SFGCUnWTy4LeAi2lutx3c8CBQ3TeJ7PRSVBGlXjR4dOMdOSdePhyEdHLdVDpjFRw9WdXCdI1_Jna4oXUH9w54fJtyhTWlB4FZhEbMc6tgk3xQ1uJ1j3uACUqsvXMAmUDP_Bva49h3fhWMx-3p8rNJ4UdMeceV-ok5Iq4clIdKIYyE3_IGElqxiVqpQlABIxa2vNpuHRd77Jrihe94Nox-wv9yiQjIEcXVVVrWYV5RMtPHQlxaYa0DIJ13weu0evpr6y7UV6q8WipkjmkrnGPXiIy6I-liow",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"choco\",\n    \"price\": 1.2,\n    \"type\": \"food\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/external/v1/products",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"external",
+										"v1",
+										"products"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"createdAt\": \"<dateTime>\",\n    \"id\": \"<integer>\",\n    \"name\": \"<string>\",\n    \"price\": \"<double>\",\n    \"type\": \"<string>\",\n    \"updatedAt\": \"<dateTime>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/external/v1/products",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"external",
+												"v1",
+												"products"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "users",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "/api/external/v1/users/:id",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczovL2V4YW1wbGUuY29tL2lzc3VlciIsInVwbiI6ImlseWVzQGdtYWlsLmNvbSIsImdyb3VwcyI6WyJQUk9EVUNUX09XTkVSIl0sImlkIjoyLCJmaXJzdE5hbWUiOiJpbHllcyIsImxhc3ROYW1lIjoiem91YW91aSIsImVtYWlsIjoiaWx5ZXMuem91YW91aUB0ZXN0Lm1haWwiLCJyb2xlIjoiUFJPRFVDVF9PV05FUiIsImFnZSI6MjYsImlhdCI6MTYzMjIzNDczOCwiZXhwIjoxNjMyMjM1MDM4LCJqdGkiOiIyMzk5NDIwZi0xNWFkLTQ0ODctYjBkNy01MDhjNmQzMjI5MjUifQ.oJf3zeAURwKbmIJigFMFC8rLwDJTYxxrfbadImYjJx96D6AvrZgbTlhevzTOES1osfunp_ZNmbpDr4H0yEeSqtiGkRPIn61Z-nQzm-454sqr9otLBBJXNWc6XlLh3j66VWP-ZaW3zY7tO94d7W08enBlUxkh1N_2Ua57ZdPtMwZGq7ZgsTxknF-4ven0Zrv1P0jypj9kbbdb23Sb06O7ZytxBll1yXyM5vYxTVNaISh2OnIupXouUoipF1MF_yGGeDAsSjhS2r87DkkvDY6nZ6BiEynyHY3IHPN7PkCf9h9m7jtVeM5UFpbZ75izSnftUnSWjsXz_IiYJhDXbtfNaA",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/external/v1/users/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"external",
+												"v1",
+												"users",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "2",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/external/v1/users/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"external",
+														"v1",
+														"users",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "/api/external/v1/users/:id",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczovL2V4YW1wbGUuY29tL2lzc3VlciIsInVwbiI6ImlseWVzQGdtYWlsLmNvbSIsImdyb3VwcyI6WyJQUk9EVUNUX09XTkVSIl0sImlkIjoyLCJmaXJzdE5hbWUiOiJpbHllcyIsImxhc3ROYW1lIjoiem91YW91aSIsImVtYWlsIjoiaWx5ZXMuem91YW91aUB0ZXN0Lm1haWwiLCJyb2xlIjoiUFJPRFVDVF9PV05FUiIsImFnZSI6MjYsImlhdCI6MTYzMjIzMzY2MCwiZXhwIjoxNjMyMjMzOTYwLCJqdGkiOiJjMDJmODM2Yi0yMWIzLTQwNTEtODhmMi1mZjY4NjJjYWQ1OWIifQ.njipXypQmyeTodZdpQZ500dFMNMojWLIcUHlaZo43tO4NinOnTjz8pPkHQ7riGEdfPvOE0SKKxv3hyxaaofHZpcH8X5pGYZ3amu0Cd3CAZsXhMld8c5rwbD1iWX9Zb6NNUjcVUrf7hPK3QNoLtBv7tGivY6mQwz2JoiifYHK30fL7BGmsmKrpMvu93BI5eoUbOkKn8aKJxSy86a_QPAeP14lXZO1m_HEPtgog6JrxrlRLAmf2yhuRCAomG25kMes7EkK2K7NiCLnE8WasPCca7z_ckr31vHHgscFmWoczrA1DJBi5nSPv24mCFgzvaBD1YEGrGurfTeMU9QN58KW2w",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"age\": 21,\n    \"firstName\": \"ily\",\n    \"lastName\": \"zou\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/external/v1/users/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"external",
+												"v1",
+												"users",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "3",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"age\": \"<integer>\",\n    \"createdAt\": \"<dateTime>\",\n    \"email\": \"<string>\",\n    \"firstName\": \"<string>\",\n    \"id\": \"<integer>\",\n    \"lastName\": \"<string>\",\n    \"role\": \"<string>\",\n    \"updatedAt\": \"<dateTime>\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/external/v1/users/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"external",
+														"v1",
+														"users",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "/api/external/v1/users/:id",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczovL2V4YW1wbGUuY29tL2lzc3VlciIsInVwbiI6ImlseWVzQGdtYWlsLmNvbSIsImdyb3VwcyI6WyJQUk9EVUNUX09XTkVSIl0sImlkIjoyLCJmaXJzdE5hbWUiOiJpbHllcyIsImxhc3ROYW1lIjoiem91YW91aSIsImVtYWlsIjoiaWx5ZXMuem91YW91aUB0ZXN0Lm1haWwiLCJyb2xlIjoiUFJPRFVDVF9PV05FUiIsImFnZSI6MjYsImlhdCI6MTYzMjIzMzY2MCwiZXhwIjoxNjMyMjMzOTYwLCJqdGkiOiJjMDJmODM2Yi0yMWIzLTQwNTEtODhmMi1mZjY4NjJjYWQ1OWIifQ.njipXypQmyeTodZdpQZ500dFMNMojWLIcUHlaZo43tO4NinOnTjz8pPkHQ7riGEdfPvOE0SKKxv3hyxaaofHZpcH8X5pGYZ3amu0Cd3CAZsXhMld8c5rwbD1iWX9Zb6NNUjcVUrf7hPK3QNoLtBv7tGivY6mQwz2JoiifYHK30fL7BGmsmKrpMvu93BI5eoUbOkKn8aKJxSy86a_QPAeP14lXZO1m_HEPtgog6JrxrlRLAmf2yhuRCAomG25kMes7EkK2K7NiCLnE8WasPCca7z_ckr31vHHgscFmWoczrA1DJBi5nSPv24mCFgzvaBD1YEGrGurfTeMU9QN58KW2w",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/external/v1/users/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"external",
+												"v1",
+												"users",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "3",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/external/v1/users/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"external",
+														"v1",
+														"users",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "/api/external/v1/users",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczovL2V4YW1wbGUuY29tL2lzc3VlciIsInVwbiI6ImlseWVzQGdtYWlsLmNvbSIsImdyb3VwcyI6WyJQUk9EVUNUX09XTkVSIl0sImlkIjoyLCJmaXJzdE5hbWUiOiJpbHllcyIsImxhc3ROYW1lIjoiem91YW91aSIsImVtYWlsIjoiaWx5ZXMuem91YW91aUB0ZXN0Lm1haWwiLCJyb2xlIjoiUFJPRFVDVF9PV05FUiIsImFnZSI6MjYsImlhdCI6MTYzMjIzNDczOCwiZXhwIjoxNjMyMjM1MDM4LCJqdGkiOiIyMzk5NDIwZi0xNWFkLTQ0ODctYjBkNy01MDhjNmQzMjI5MjUifQ.oJf3zeAURwKbmIJigFMFC8rLwDJTYxxrfbadImYjJx96D6AvrZgbTlhevzTOES1osfunp_ZNmbpDr4H0yEeSqtiGkRPIn61Z-nQzm-454sqr9otLBBJXNWc6XlLh3j66VWP-ZaW3zY7tO94d7W08enBlUxkh1N_2Ua57ZdPtMwZGq7ZgsTxknF-4ven0Zrv1P0jypj9kbbdb23Sb06O7ZytxBll1yXyM5vYxTVNaISh2OnIupXouUoipF1MF_yGGeDAsSjhS2r87DkkvDY6nZ6BiEynyHY3IHPN7PkCf9h9m7jtVeM5UFpbZ75izSnftUnSWjsXz_IiYJhDXbtfNaA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/external/v1/users",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"external",
+										"v1",
+										"users"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/external/v1/users",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"external",
+												"v1",
+												"users"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "/",
+			"type": "string"
+		}
+	]
+}

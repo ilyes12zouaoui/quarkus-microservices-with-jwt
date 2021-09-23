@@ -2,7 +2,7 @@ Welcome to "quarkus-microservices-with-jwt".
 
 In order to learn the Quarkus framework and help others learn it, I passionately created this project which contains three Quarkus microservices:
 
-- Product microservice uses JWT Authentication and provides Product CRUD operation endpoints.
+- Product microservice uses JWT Authentication and provides Product CRUD operation endpoints (For simplicity reasons I included the .pem publickey and private key directly under /src/main/resources which is not a secure approach obviously). 
 - Coffee microservice uses HTTP Basic Authentication and provides Coffee CRUD operation endpoints.
 - Car microservice does not use authentication and provides Car CRUD operation endpoints.
 

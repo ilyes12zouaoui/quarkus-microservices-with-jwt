@@ -1,9 +1,6 @@
 package tn.ilyeszouaoui.service;
 
-import org.eclipse.microprofile.rest.client.inject.RestClient;
-import tn.ilyeszouaoui.adapter.FoodRestClient;
 import tn.ilyeszouaoui.dataobject.CarDTO;
-import tn.ilyeszouaoui.dataobject.FoodRestClientDTO;
 import tn.ilyeszouaoui.dataobject.mapper.CarMapper;
 import tn.ilyeszouaoui.persistence.CarRepository;
 import tn.ilyeszouaoui.persistence.entity.CarEntity;
@@ -19,18 +16,10 @@ import java.util.stream.Collectors;
 public class CarService {
 
     @Inject
-    @RestClient
-    FoodRestClient foodRestClient;
-
-    @Inject
     CarMapper carMapper;
 
     @Inject
     CarRepository carRepository;
-
-    public FoodRestClientDTO findFoodRestClientByName(String name){
-        return foodRestClient.getFoodName(name);
-    }
 
     public void createCar(String name, double price) {
         CarEntity carEntity = new CarEntity(name, price);
